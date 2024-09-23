@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link href="../../../static/commen_css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .form-container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 登录表单 -->
+<div class="form-container">
+    <h2 class="form-header">登录</h2>
+    <form>
+        <div class="mb-3">
+            <label for="loginEmail" class="form-label">邮箱地址</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="请输入邮箱">
+        </div>
+        <div class="mb-3">
+            <label for="loginPassword" class="form-label">密码</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="请输入密码">
+        </div>
+        <div class="d-grid gap-2">
+            <button type="button" class="btn btn-primary btn-block" id="loginBtn">登录</button>
+        </div>
+        <div class="text-center mt-3">
+            <p>还没有账号？ <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">立即注册</a></p>
+        </div>
+    </form>
+</div>
+
+<!-- 注册表单弹出框 -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">注册</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="registerName" class="form-label">用户名</label>
+                        <input type="text" class="form-control" id="registerName" placeholder="请输入用户名">
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label">邮箱地址</label>
+                        <input type="email" class="form-control" id="registerEmail" placeholder="请输入邮箱">
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">密码</label>
+                        <input type="password" class="form-control" id="registerPassword" placeholder="请输入密码">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-primary btn-block" id="registerBtn">注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 引入 Bootstrap JS 和 Popper.js -->
+
+<script src="../../../static/commen_js/jquery-3.6.0.min.js"></script>
+<script src="../../../static/commen_js/bootstrap.bundle.min.js"></script>
+<script type="application/javascript">
+    $(function () {
+        $('#loginBtn').click(function () {
+            $.ajax({
+                url: '/rbac/login',        // 请求的服务器地址
+                type: 'POST',              // 请求类型：GET、POST 等
+                dataType: 'json',         // 返回的数据类型：json、html、xml 等
+                data: JSON.stringify({loginEmail: $('#loginEmail').val(), loginPassword: $('#loginPassword').val()}), // 发送到服务器的数据
+                headers: {'Content-Type': 'application/json'},
+                success: function (response) {
+                    // 请求成功时的处理
+                    if (response.status) {
+                        location.href = '/rbac/index'
+                    } else {
+                        alert(response.message)
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // 请求失败时的处理
+                    console.log('Error:', error);
+                }
+            });
+        })
+
+        $('#registerBtn').click(function () {
+            $.ajax({
+                url: '/rbac/register',        // 请求的服务器地址
+                type: 'POST',              // 请求类型：GET、POST 等
+                dataType: 'json',         // 返回的数据类型：json、html、xml 等
+                data: JSON.stringify({
+                    registerName: $('#registerName').val(),
+                    registerEmail: $('#registerEmail').val(),
+                    registerPassword: $('#registerPassword').val()
+                }), // 发送到服务器的数据
+                headers: {'Content-Type': 'application/json'},
+                success: function (response) {
+                    // 请求成功时的处理
+                    if (response.status) {
+                        location.href = '/rbac/login'
+                    } else {
+                        alert(response.message)
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // 请求失败时的处理
+                    console.log('Error:', error);
+                }
+            });
+        })
+    })
+
+</script>
+</body>
+</html>

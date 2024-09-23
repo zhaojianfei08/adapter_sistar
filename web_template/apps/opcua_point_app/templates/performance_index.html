@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link href="../../../static/commen_css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<h2>performance monitoring</h2>
+
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <tbody>
+        {% for k,v in performance.items() %}
+            <tr>
+                <th>{{ k }}</th>
+                <td>{{ v }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<h2>thread monitoring</h2>
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>thread_id</th>
+            <th>thread_name</th>
+            <th>thread_status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for thread in thread_status %}
+            <tr>
+                <th>{{ thread[0] }}</th>
+                <td>{{ thread[1] }}</td>
+                <td>{{ thread[2] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+<!-- 引入 Bootstrap 和 jQuery JavaScript 文件 -->
+<script src="../../../static/commen_js/jquery-3.6.0.min.js"></script>
+<script src="../../../static/commen_js/bootstrap.bundle.min.js"></script>
+<script>
+    $(function(){
+        setInterval(function(){location.reload()}, 5000)
+    })
+</script>
+</body>
+</html>

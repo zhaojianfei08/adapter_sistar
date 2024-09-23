@@ -1,0 +1,44 @@
+# 断线重连机制
+多进程中
+
+
+# 多进程模型
+一个设备一个进程
+
+
+# 多线程模型
+不同的采集频率一个线程，一个进程中的多个线程共享一个链接，进程
+
+
+# 客户端采用订阅的方式
+
+
+# 客户端采用轮旋的方式
+
+
+# 字段的含义
+字段名称                字段含义            数值
+No                     自增id
+tag_uuid	           变量的唯一ID
+node_id	               UA node_id
+interval	           采集周期，以秒为单位
+active	               是否激活，TURE, FALSE 必须大写
+active_alarm           是否激活报警
+alarm_up               报警上限
+alarm_down             报警下限
+alarm_up_info          报警上限值
+alarm_down_info        报警下限值
+alarm_up_change        达到报警上限的修改值
+alarm_down_change      达到报警下限的修改值
+active_archive         激活归档
+archive_onchange       变化时归档 为FALSE archive_interval有效
+archive_interval       轮训归档周期
+active_scale           激活变换
+scale_sign             符号
+scale_factor           因子
+mqtt_topic_name
+unit
+comments
+
+
+

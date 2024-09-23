@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title_name %}{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="../../../static/commen_css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../static/commen_css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="../../../static/commen_css/select2.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Add Record Form -->
+    {% block add_form %}{% endblock %}
+    <!-- Records Table -->
+    {% block table %}{% endblock %}
+</div>
+
+<!-- Edit Record Modal -->
+{% block edit_form %}
+
+{% endblock %}
+
+<!-- Bootstrap JS and dependencies -->
+<script src="../../../static/commen_js/jquery-3.6.0.min.js"></script>
+<script src="../../../static/commen_js/bootstrap.bundle.min.js"></script>
+<script src="../../../static/commen_js/bootstrap-select.min.js"></script>
+<script src="../../../static/commen_js/select2.min.js"></script>
+
+<!-- Custom JS for CRUD operations -->
+{% block script %}
+{% endblock %}
+
+</body>
+</html>
