@@ -1,0 +1,6 @@
+
+本web服务负责封装sistar.dll 文件，负责将工单数据下发到braumat中
+
+本app部署在win server上，通过docker-compose对文件进行部署
+
+通过logger日志对数据进行保存

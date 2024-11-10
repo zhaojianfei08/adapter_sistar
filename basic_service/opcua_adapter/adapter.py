@@ -56,7 +56,7 @@ class OPCUAAdapter(object):
         except Exception as e:
             self.disconnect()
             self.connected = False
-            logger.error("初次连接失败,失败原因：", str(e))
+            logger.error("初次连接失败,失败原因：", e)
             # 开始重连
             self.reconnect()
 

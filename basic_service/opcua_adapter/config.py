@@ -16,6 +16,15 @@ mysql_connection_params = {
     'database': 'th'
 }
 
+mssql_connection_params = {
+    'username': 'sa',
+    'password': 'Zhaojianfei0820#',
+    'host': '127.0.0.1',
+    'port': 1433,
+    'database': 'SistarData',
+    'driver': 'ODBC+Driver+17+for+SQL+Server'
+}
+
 redis_connection_params = {
     'host': 'localhost',  # Redis 服务器的地址
     'port': 6379,  # Redis 服务器的端口

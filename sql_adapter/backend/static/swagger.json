@@ -1,0 +1,32 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API Documentation",
+    "version": "1.0.0",
+    "title": "Flask API"
+  },
+  "host": "localhost:5001",
+  "basePath": "/api",
+  "schemes": ["http"],
+  "paths": {
+    "/test": {
+      "get": {
+        "summary": "Returns a greeting",
+        "operationId": "getHello",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

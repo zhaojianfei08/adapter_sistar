@@ -1,0 +1,91 @@
+{
+  "sistar_eng_areas": {
+    "columns": [],
+    "select_column": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_batchprot_kops": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_enums": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_eops": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_epars": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_materials": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_matgroups": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_ordercat_params": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_pcus": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_reccats": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_recipe_lines": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_recipes": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_sites": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_tags": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_tanks": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_unit_tags": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_eng_units": {
+    "columns": "update_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_rt_batches": {
+    "columns": "insert_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_rt_batchprot_data": {
+    "columns": "insert_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_rt_batchprot_params": {
+    "columns": "insert_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_rt_step_params": {
+    "columns": "insert_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  },
+  "sistar_rt_steps": {
+    "columns": "insert_timestamp",
+    "last_time": "2000-01-01 00:00:00"
+  }
+}
